@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <button class="btn btn-success" onclick="showToast('This is a dynamic message.')">Show Toast</button>
+
+    <!--toast start-->
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="custom-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="img/bell.png" class="rounded me-2" alt="Bell" style="width: 20px; height: 20px;">
+                <strong class="me-auto">Notification</strong>
+                <small>1 secs ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <span id="toast-content"></span>
+            </div>
+        </div>
+    </div>
+    <!--toast end-->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        function showToast(content) {
+            const toastElement = document.getElementById('custom-toast');
+            const toastContent = document.getElementById('toast-content');
+            toastContent.textContent = content;
+            const toast = new bootstrap.Toast(toastElement);
+            toast.show();
+        }
+    </script>
+</body>
+
+</html>
