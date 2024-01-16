@@ -11,9 +11,11 @@
 </head>
 
 <body>
-
-    <button class="btn btn-success" onclick="showToast('This is a dynamic message.')">Show Toast</button>
-
+    <!--container start-->
+    <div class="container mt-5">    
+        <button class="btn btn-success" onclick="showToast('This is a dynamic message.')">Show Toast</button>
+    </div> 
+    <!--container end-->
     <!--toast start-->
     <div class="toast-container position-fixed top-0 end-0 p-3">
         <div id="custom-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
@@ -29,7 +31,7 @@
         </div>
     </div>
     <!--toast end-->
-
+    
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery.js"></script>
     <script>
